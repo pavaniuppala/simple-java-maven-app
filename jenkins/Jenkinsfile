@@ -21,9 +21,9 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        stage('sonarqube') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh 'mvn sonar:sonar'
             }
         }
     }
